@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="lib/froala/2.8.4/css/froala_editor.pkgd.min.css">
+	<link rel="stylesheet" href="lib/froala/2.8.4/css/font-awesome.min.css">
+	<script type="text/javascript" src="lib/jquery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="lib/froala/2.8.4/js/froala_editor.pkgd.js"></script>
+	<style>
+		.editor{
+			width: 100%;
+			height: 400px;
+		}
+	</style>
+	<title>Document</title>
+</head>
+<body>
+	<div class="editor"></div>
+<script>
+	var defaultEditorOptions = ["bold", "italic",
+            "underline", "color", "fontSize", "align", "insertLink", "-",
+            "formatOL", "formatUL", "indent", "outdent", "insertImage",
+            "insertVideo" ];
+	$('.editor').froalaEditor({
+		  toolbarInline: true,
+          toolbarButtons: defaultEditorOptions,
+          videoInsertButtons: ["videoBack", "|", "videoEmbed", "videoByURL"],
+          imageInsertButtons: ["imageBack", "|", "imageByURL"],
+          charCounterCount: true,
+          imageUploadRemoteUrls: false,
+          placeholderText: "Demo placeholderText",
+          quickInsertButtons: ["imageQuickInsert", "videoQuickInsert"],
+          initOnClick: false,
+          useClasses: false,
+          imageDefaultWidth: 0,
+          paragraphFormat: {
+            H1: "Heading 1",
+            H2: "Heading 2",
+            H3: "Heading 3",
+            H4: "Heading 4"
+          },
+          fontSize: ["8", "9", "10", "11", "12", "14", "16", "18", "20", "22", "24", "26", "28", "30", "36"],
+          videoEditButtons: ["videoReplace", "videoRemove"],
+          videoInsertButtons: ["videoBack", "|", "videoByURL", "videoEmbed"],
+          videoResize: false,
+          linkEditButtons: ["linkEdit", "linkRemove"],
+          linkInsertButtons: ["linkBack"],
+          linkAlwaysBlank: true,
+          imageEditButtons: [
+            "imageSize",
+            "imageAlign",
+            "|",
+            "imageLink",
+            "linkOpen",
+            "linkEdit",
+            "linkRemove",
+            "-",
+            "imageAlt",
+            "imageReplace",
+            "imageRemove"
+          ]});
+  setFocus();
+  function setFocus() {
+    var editor = $('.editor').data('froala.editor');
+    if (!editor.selection.inEditor()) {
+      editor.selection.setAtEnd(editor.$el.get(0));
+      editor.selection.restore();
+    } else {
+      editor.$el.focus();
+    }
+
+    };
+</script>
+	
+</body>
+</html>

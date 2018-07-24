@@ -1,0 +1,80 @@
+.fr-toolbar.fr-inline, .fr-popup{
+	z-index: 99999999 !important;	
+}
+ .fr-box .fr-qi-helper{
+ 	padding-left: 0px;
+ }   
+.fr-box .fr-quick-insert .fr-floating-btn,
+.fr-box .fr-qi-helper .fr-floating-btn{
+	width: 25px !important;
+	height: 25px !important;
+	line-height: 25px !important;
+}
+
+
+.fr-box a.fr-floating-btn i, 
+.fr-box a.fr-floating-btn svg{
+	line-height: 25px !important;
+}
+.fr-element{
+	-moz-user-select: text;
+}
+.fr-counter{
+	display: none !important;
+}
+
+.fr-wrapper::-webkit-scrollbar, .dashboardScroller::-webkit-scrollbar {
+	height: 6px;
+	width: 6px;
+	background: white;
+}
+
+.fr-wrapper::-webkit-scrollbar-thumb, .dashboardScroller::-webkit-scrollbar-thumb {
+	background: #cacaca;
+	-webkit-border-radius: 1ex;
+}
+
+.fr-wrapper::-webkit-scrollbar-corner, .dashboardScroller::-webkit-scrollbar-corner {
+	background: #FFF;
+}
+.fr-toolbar .fr-command.fr-btn, .fr-popup .fr-command.fr-btn,
+.fr-qi-helper a.fr-btn.fr-floating-btn,
+.fr-toolbar .fr-command.fr-btn.fr-dropdown.fr-active, 
+.fr-popup .fr-command.fr-btn.fr-dropdown.fr-active,
+.fr-toolbar .fr-command.fr-btn.fr-dropdown.fr-active:hover, 
+.fr-popup .fr-command.fr-btn.fr-dropdown.fr-active:hover,
+.fr-toolbar .fr-command.fr-btn.fr-dropdown.fr-active:focus, 
+.fr-popup .fr-command.fr-btn.fr-dropdown.fr-active:focus{
+	color: #596377;	
+}
+
+.fr-toolbar,
+.fr-popup{
+    border-top: 5px solid #596377;
+    color: #596377;
+}
+.fr-toolbar.fr-inline.fr-above,
+.fr-popup.fr-above{
+	border-bottom: 5px solid #596377;
+}
+.fr-toolbar.fr-inline .fr-arrow,
+.fr-popup .fr-arrow{
+	border-bottom: 5px solid #596377;
+}
+.fr-toolbar .fr-command.fr-btn.fr-dropdown::after, 
+.fr-popup .fr-command.fr-btn.fr-dropdown::after{
+	border-top-color: #596377 !important;
+}
+.fr-popup.fr-above .fr-arrow{
+	border-top: 5px solid #596377;
+}
+.fr-element p{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.fr-wrapper {
+	overflow-x: hidden !important;
+}
+.fr-video{
+	position: relative;
+}
